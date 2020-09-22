@@ -1,0 +1,14 @@
+cm\belrose\gestionstockmvc\entities\Categorie.class
+cm\belrose\gestionstockmvc\entities\CommandeClient.class
+cm\belrose\gestionstockmvc\entities\UsersRoles.class
+cm\belrose\gestionstockmvc\entities\LivraisonFournisseur.class
+cm\belrose\gestionstockmvc\entities\Personne.class
+cm\belrose\gestionstockmvc\entities\Vente.class
+cm\belrose\gestionstockmvc\entities\Image.class
+cm\belrose\gestionstockmvc\entities\ArticleVente.class
+cm\belrose\gestionstockmvc\entities\ArticleCategorie.class
+cm\belrose\gestionstockmvc\entities\Users.class
+cm\belrose\gestionstockmvc\entities\MouvementStock.class
+cm\belrose\gestionstockmvc\GestionstockmvcApplication.class
+cm\belrose\gestionstockmvc\entities\Article.class
+cm\belrose\gestionstockmvc\entities\Roles.class
