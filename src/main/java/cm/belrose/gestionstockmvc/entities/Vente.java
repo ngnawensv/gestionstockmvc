@@ -11,7 +11,7 @@ public class Vente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToMany(mappedBy = "vente")
-    private Collection<ArticleVente> listeArticleVentes;
+    private Collection<ArticleVente> articleVentes;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateCreation;
     @Temporal(TemporalType.TIMESTAMP)
@@ -25,12 +25,12 @@ public class Vente implements Serializable {
         this.id = id;
     }
 
-    public Collection<ArticleVente> getListeArticleVentes() {
-        return listeArticleVentes;
+    public Collection<ArticleVente> getArticleVentes() {
+        return articleVentes;
     }
 
-    public void setListeArticleVentes(Collection<ArticleVente> listeArticleVentes) {
-        this.listeArticleVentes = listeArticleVentes;
+    public void setArticleVentes(Collection<ArticleVente> articleVentes) {
+        this.articleVentes = articleVentes;
     }
 
     public Date getDateCreation() {
@@ -47,15 +47,5 @@ public class Vente implements Serializable {
 
     public void setDateModification(Date dateModification) {
         this.dateModification = dateModification;
-    }
-
-    @Override
-    public String toString() {
-        return "Vente{" +
-                "id=" + id +
-                ", listeArticleVentes=" + listeArticleVentes +
-                ", dateCreation=" + dateCreation +
-                ", dateModification=" + dateModification +
-                '}';
     }
 }

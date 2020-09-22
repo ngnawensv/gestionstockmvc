@@ -18,18 +18,17 @@ public class Article implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateModification;
     @OneToMany(mappedBy = "article")
-    private Collection<CommandeClient> listeCommandeClients;
+    private Collection<CommandeClient> commandeClients;
     @OneToMany(mappedBy = "article")
-    private Collection<ArticleCategorie> listArticleCategories;
+    private Collection<ArticleCategorie> articleCategories;
     @OneToMany(mappedBy = "article")
-    private Collection<ArticleVente> listeArticleVentes;
+    private Collection<ArticleVente> articleVentes;
     @OneToMany (mappedBy = "article")
-    private Collection<Image> listeImages;
+    private Collection<Image> images;
     @OneToMany(mappedBy = "article")
-    private Collection<LivraisonFournisseur> listeLivraisonFournisseurs;
+    private Collection<LivraisonFournisseur> livraisonFournisseurs;
     @OneToMany(mappedBy = "article")
-    private Collection<MouvementStock> listeMouvementStocks;
-
+    private Collection<MouvementStock> mouvementStocks;
 
     public Long getId() {
         return id;
@@ -79,51 +78,51 @@ public class Article implements Serializable {
         this.dateModification = dateModification;
     }
 
-    public Collection<CommandeClient> getListeCommandeClients() {
-        return listeCommandeClients;
+    public Collection<CommandeClient> getCommandeClients() {
+        return commandeClients;
     }
 
-    public void setListeCommandeClients(Collection<CommandeClient> listeCommandeClients) {
-        this.listeCommandeClients = listeCommandeClients;
+    public void setCommandeClients(Collection<CommandeClient> commandeClients) {
+        this.commandeClients = commandeClients;
     }
 
-    public Collection<ArticleCategorie> getListArticleCategories() {
-        return listArticleCategories;
+    public Collection<ArticleCategorie> getArticleCategories() {
+        return articleCategories;
     }
 
-    public void setListArticleCategories(Collection<ArticleCategorie> listArticleCategories) {
-        this.listArticleCategories = listArticleCategories;
+    public void setArticleCategories(Collection<ArticleCategorie> articleCategories) {
+        this.articleCategories = articleCategories;
     }
 
-    public Collection<ArticleVente> getListeArticleVentes() {
-        return listeArticleVentes;
+    public Collection<ArticleVente> getArticleVentes() {
+        return articleVentes;
     }
 
-    public void setListeArticleVentes(Collection<ArticleVente> listeArticleVentes) {
-        this.listeArticleVentes = listeArticleVentes;
+    public void setArticleVentes(Collection<ArticleVente> articleVentes) {
+        this.articleVentes = articleVentes;
     }
 
-    public Collection<Image> getListeImages() {
-        return listeImages;
+    public Collection<Image> getImages() {
+        return images;
     }
 
-    public void setListeImages(Collection<Image> listeImages) {
-        this.listeImages = listeImages;
+    public void setImages(Collection<Image> images) {
+        this.images = images;
     }
 
-    public Collection<LivraisonFournisseur> getListeLivraisonFournisseurs() {
-        return listeLivraisonFournisseurs;
+    public Collection<LivraisonFournisseur> getLivraisonFournisseurs() {
+        return livraisonFournisseurs;
     }
 
-    public void setListeLivraisonFournisseurs(Collection<LivraisonFournisseur> listeLivraisonFournisseurs) {
-        this.listeLivraisonFournisseurs = listeLivraisonFournisseurs;
+    public void setLivraisonFournisseurs(Collection<LivraisonFournisseur> livraisonFournisseurs) {
+        this.livraisonFournisseurs = livraisonFournisseurs;
     }
 
-    public Collection<MouvementStock> getListeMouvementStocks() {
-        return listeMouvementStocks;
+    public Collection<MouvementStock> getMouvementStocks() {
+        return mouvementStocks;
     }
 
-    public void setListeMouvementStocks(Collection<MouvementStock> listeMouvementStocks) {
-        this.listeMouvementStocks = listeMouvementStocks;
+    public void setMouvementStocks(Collection<MouvementStock> mouvementStocks) {
+        this.mouvementStocks = mouvementStocks;
     }
 }
