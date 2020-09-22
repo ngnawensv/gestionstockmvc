@@ -14,7 +14,7 @@ public class Users implements Serializable {
     private boolean active;
     private String photoProfil;
     @OneToMany(mappedBy = "user")
-    private Collection<UsersRoles> listeUsersRoles;
+    private Collection<UsersRoles> usersRoles;
 
     public Long getId() {
         return id;
@@ -48,19 +48,19 @@ public class Users implements Serializable {
         this.active = active;
     }
 
-    public Collection<UsersRoles> getListeUsersRoles() {
-        return listeUsersRoles;
-    }
-
-    public void setListeUsersRoles(Collection<UsersRoles> listeUsersRoles) {
-        this.listeUsersRoles = listeUsersRoles;
-    }
-
     public String getPhotoProfil() {
         return photoProfil;
     }
 
     public void setPhotoProfil(String photoProfil) {
         this.photoProfil = photoProfil;
+    }
+
+    public Collection<UsersRoles> getUsersRoles() {
+        return usersRoles;
+    }
+
+    public void setUsersRoles(Collection<UsersRoles> usersRoles) {
+        this.usersRoles = usersRoles;
     }
 }

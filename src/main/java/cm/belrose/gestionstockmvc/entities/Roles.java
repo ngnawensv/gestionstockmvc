@@ -11,7 +11,7 @@ public class Roles implements Serializable {
     private Long id;
     private  String roleName;
     @OneToMany(mappedBy = "role")
-    private Collection<UsersRoles> listeUsersRoles;
+    private Collection<UsersRoles> usersRoles;
 
     public Long getId() {
         return id;
@@ -29,20 +29,11 @@ public class Roles implements Serializable {
         this.roleName = roleName;
     }
 
-    public Collection<UsersRoles> getListeUsersRoles() {
-        return listeUsersRoles;
+    public Collection<UsersRoles> getUsersRoles() {
+        return usersRoles;
     }
 
-    public void setListeUsersRoles(Collection<UsersRoles> listeUsersRoles) {
-        this.listeUsersRoles = listeUsersRoles;
-    }
-
-    @Override
-    public String toString() {
-        return "Roles{" +
-                "id=" + id +
-                ", roleName='" + roleName + '\'' +
-                ", listeUsersRoles=" + listeUsersRoles +
-                '}';
+    public void setUsersRoles(Collection<UsersRoles> usersRoles) {
+        this.usersRoles = usersRoles;
     }
 }

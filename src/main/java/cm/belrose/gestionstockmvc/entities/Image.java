@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-public class Image implements Serializable {
+public class Image implements Serializable { 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

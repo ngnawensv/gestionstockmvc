@@ -22,9 +22,9 @@ public class Personne implements Serializable {
     private String residence;
     private String photo;
     @OneToMany(mappedBy = "personne")
-    private Collection<CommandeClient> listeCommandeClients;
+    private Collection<CommandeClient> commandeClients;
     @OneToMany(mappedBy = "personne")
-    private Collection<LivraisonFournisseur> listeLivraisonFournisseurs;
+    private Collection<LivraisonFournisseur> livraisonFournisseurs;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateCreation;
     @Temporal(TemporalType.TIMESTAMP)
@@ -142,19 +142,19 @@ public class Personne implements Serializable {
         this.photo = photo;
     }
 
-    public Collection<CommandeClient> getListeCommandeClients() {
-        return listeCommandeClients;
+    public Collection<CommandeClient> getCommandeClients() {
+        return commandeClients;
     }
 
-    public void setListeCommandeClients(Collection<CommandeClient> listeCommandeClients) {
-        this.listeCommandeClients = listeCommandeClients;
+    public void setCommandeClients(Collection<CommandeClient> commandeClients) {
+        this.commandeClients = commandeClients;
     }
 
-    public Collection<LivraisonFournisseur> getListeLivraisonFournisseurs() {
-        return listeLivraisonFournisseurs;
+    public Collection<LivraisonFournisseur> getLivraisonFournisseurs() {
+        return livraisonFournisseurs;
     }
 
-    public void setListeLivraisonFournisseurs(Collection<LivraisonFournisseur> listeLivraisonFournisseurs) {
-        this.listeLivraisonFournisseurs = listeLivraisonFournisseurs;
+    public void setLivraisonFournisseurs(Collection<LivraisonFournisseur> livraisonFournisseurs) {
+        this.livraisonFournisseurs = livraisonFournisseurs;
     }
 }

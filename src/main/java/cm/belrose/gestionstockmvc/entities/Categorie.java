@@ -15,7 +15,7 @@ public class Categorie implements Serializable {
     private Date dateCreation;
     private Date dateModification;
     @OneToMany(mappedBy = "categorie")
-    private Collection<ArticleCategorie> listeArticleCategories;
+    private Collection<ArticleCategorie> articleCategories;
 
     public Long getId() {
         return id;
@@ -57,23 +57,11 @@ public class Categorie implements Serializable {
         this.dateModification = dateModification;
     }
 
-    public Collection<ArticleCategorie> getListeArticleCategories() {
-        return listeArticleCategories;
+    public Collection<ArticleCategorie> getArticleCategories() {
+        return articleCategories;
     }
 
-    public void setListeArticleCategories(Collection<ArticleCategorie> listeArticleCategories) {
-        this.listeArticleCategories = listeArticleCategories;
-    }
-
-    @Override
-    public String toString() {
-        return "Categorie{" +
-                "id=" + id +
-                ", code='" + code + '\'' +
-                ", nom='" + nom + '\'' +
-                ", dateCreation=" + dateCreation +
-                ", dateModification=" + dateModification +
-                ", listeArticleCategories=" + listeArticleCategories +
-                '}';
+    public void setArticleCategories(Collection<ArticleCategorie> articleCategories) {
+        this.articleCategories = articleCategories;
     }
 }
