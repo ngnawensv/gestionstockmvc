@@ -9,12 +9,13 @@ public class LivraisonFournisseur implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private int quantite;
     @ManyToOne
     private Article article;
     @ManyToOne
     private Personne personne;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date dateCreation;
+    private Date dateLivraison;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateModification;
 
@@ -26,28 +27,20 @@ public class LivraisonFournisseur implements Serializable {
         this.id = id;
     }
 
+    public int getQuantite() {
+        return quantite;
+    }
+
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
+    }
+
     public Article getArticle() {
         return article;
     }
 
     public void setArticle(Article article) {
         this.article = article;
-    }
-
-    public Date getDateCreation() {
-        return dateCreation;
-    }
-
-    public void setDateCreation(Date dateCreation) {
-        this.dateCreation = dateCreation;
-    }
-
-    public Date getDateModification() {
-        return dateModification;
-    }
-
-    public void setDateModification(Date dateModification) {
-        this.dateModification = dateModification;
     }
 
     public Personne getPersonne() {
@@ -58,14 +51,19 @@ public class LivraisonFournisseur implements Serializable {
         this.personne = personne;
     }
 
-    @Override
-    public String toString() {
-        return "LivraisonFournisseur{" +
-                "id=" + id +
-                ", article=" + article +
-                ", personne=" + personne +
-                ", dateCreation=" + dateCreation +
-                ", dateModification=" + dateModification +
-                '}';
+    public Date getDateLivraison() {
+        return dateLivraison;
+    }
+
+    public void setDateLivraison(Date dateLivraison) {
+        this.dateLivraison = dateLivraison;
+    }
+
+    public Date getDateModification() {
+        return dateModification;
+    }
+
+    public void setDateModification(Date dateModification) {
+        this.dateModification = dateModification;
     }
 }

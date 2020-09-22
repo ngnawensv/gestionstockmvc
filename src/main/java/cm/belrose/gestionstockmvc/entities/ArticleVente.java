@@ -9,12 +9,13 @@ public class ArticleVente  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private int quantite;
     @ManyToOne
     private Article article;
     @ManyToOne
     private Vente vente;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date dateCreation;
+    private Date dateVente;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateModification;
 
@@ -24,6 +25,14 @@ public class ArticleVente  implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public int getQuantite() {
+        return quantite;
+    }
+
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
     }
 
     public Article getArticle() {
@@ -42,12 +51,12 @@ public class ArticleVente  implements Serializable {
         this.vente = vente;
     }
 
-    public Date getDateCreation() {
-        return dateCreation;
+    public Date getDateVente() {
+        return dateVente;
     }
 
-    public void setDateCreation(Date dateCreation) {
-        this.dateCreation = dateCreation;
+    public void setDateVente(Date dateVente) {
+        this.dateVente = dateVente;
     }
 
     public Date getDateModification() {
@@ -56,16 +65,5 @@ public class ArticleVente  implements Serializable {
 
     public void setDateModification(Date dateModification) {
         this.dateModification = dateModification;
-    }
-
-    @Override
-    public String toString() {
-        return "ArticleVente{" +
-                "id=" + id +
-                ", article=" + article +
-                ", vente=" + vente +
-                ", dateCreation=" + dateCreation +
-                ", dateModification=" + dateModification +
-                '}';
     }
 }

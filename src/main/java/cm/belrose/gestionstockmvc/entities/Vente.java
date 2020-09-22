@@ -10,6 +10,7 @@ public class Vente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String code;
     @OneToMany(mappedBy = "vente")
     private Collection<ArticleVente> articleVentes;
     @Temporal(TemporalType.TIMESTAMP)
@@ -23,6 +24,14 @@ public class Vente implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Collection<ArticleVente> getArticleVentes() {

@@ -1,7 +1,9 @@
 package cm.belrose.gestionstockmvc.initialisationDb;
 
 import cm.belrose.gestionstockmvc.dao.CategorieDao;
+import cm.belrose.gestionstockmvc.dao.VenteDao;
 import cm.belrose.gestionstockmvc.entities.Categorie;
+import cm.belrose.gestionstockmvc.entities.MouvementStock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,9 @@ import java.util.stream.Stream;
 public class StockInitServiceImpl implements StockInitService {
     @Autowired
     CategorieDao categorieDao;
+
+    @Autowired
+    VenteDao venteDao;
     @Override
     public void initCategorie() {
         Stream.of("Categorie 1","Categorie 2","Categorie 3","Categorie 4","Categorie 5").forEach(nomCategorie->{
@@ -27,12 +32,8 @@ public class StockInitServiceImpl implements StockInitService {
     }
 
     @Override
-    public void initMouvementStock() {
-
-    }
-
-    @Override
     public void initVente() {
+
 
     }
 
@@ -73,6 +74,15 @@ public class StockInitServiceImpl implements StockInitService {
 
     @Override
     public void initArticle() {
+
+    }
+
+    @Override
+    public void initMouvementStock() {
+        Stream.of("Vente","Livraison").forEach(typeMouvement->{
+            MouvementStock mouvementStock=new MouvementStock();
+            mouvementStock.setType(typeMouvement);
+        });
 
     }
 }

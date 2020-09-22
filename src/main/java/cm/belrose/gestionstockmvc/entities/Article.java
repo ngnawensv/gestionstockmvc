@@ -11,8 +11,8 @@ public class Article implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
-    private double prixUnitaire;
-    private double tauxTva;
+    private double prixAchat;
+    private double prixVente;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateCreation;
     @Temporal(TemporalType.TIMESTAMP)
@@ -46,20 +46,20 @@ public class Article implements Serializable {
         this.nom = nom;
     }
 
-    public double getPrixUnitaire() {
-        return prixUnitaire;
+    public double getPrixAchat() {
+        return prixAchat;
     }
 
-    public void setPrixUnitaire(double prixUnitaire) {
-        this.prixUnitaire = prixUnitaire;
+    public void setPrixAchat(double prixAchat) {
+        this.prixAchat = prixAchat;
     }
 
-    public double getTauxTva() {
-        return tauxTva;
+    public double getPrixVente() {
+        return prixVente;
     }
 
-    public void setTauxTva(double tauxTva) {
-        this.tauxTva = tauxTva;
+    public void setPrixVente(double prixVente) {
+        this.prixVente = prixVente;
     }
 
     public Date getDateCreation() {

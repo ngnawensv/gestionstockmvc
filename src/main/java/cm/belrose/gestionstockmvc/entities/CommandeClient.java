@@ -9,12 +9,13 @@ public class CommandeClient  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String quantite;
     @ManyToOne
     private Article article;
     @ManyToOne
     private Personne personne;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date dateCreation;
+    private Date dateCommande;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateModification;
 
@@ -24,6 +25,14 @@ public class CommandeClient  implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getQuantite() {
+        return quantite;
+    }
+
+    public void setQuantite(String quantite) {
+        this.quantite = quantite;
     }
 
     public Article getArticle() {
@@ -42,12 +51,12 @@ public class CommandeClient  implements Serializable {
         this.personne = personne;
     }
 
-    public Date getDateCreation() {
-        return dateCreation;
+    public Date getDateCommande() {
+        return dateCommande;
     }
 
-    public void setDateCreation(Date dateCreation) {
-        this.dateCreation = dateCreation;
+    public void setDateCommande(Date dateCommande) {
+        this.dateCommande = dateCommande;
     }
 
     public Date getDateModification() {
@@ -56,16 +65,5 @@ public class CommandeClient  implements Serializable {
 
     public void setDateModification(Date dateModification) {
         this.dateModification = dateModification;
-    }
-
-    @Override
-    public String toString() {
-        return "CommandeClient{" +
-                "id=" + id +
-                ", article=" + article +
-                ", personne=" + personne +
-                ", dateCreation=" + dateCreation +
-                ", dateModification=" + dateModification +
-                '}';
     }
 }
